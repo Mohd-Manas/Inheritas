@@ -7,7 +7,7 @@ const UAEFlag = "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the
 
 const menuItems = [
   { label: "Introduction", sectionId: "introduction" },
-  { label: "Why you Need a Will", sectionId: "needs" },
+  { label: "Needs", sectionId: "needs" },
   { label: "Sharia Law", sectionId: "sharia-law" },
   { label: "How Can I help", sectionId: "help" },
   { label: "Registration process", sectionId: "registration" },
