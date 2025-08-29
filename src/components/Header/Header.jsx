@@ -12,7 +12,7 @@ const menuItems = [
   { label: "How Can I help", sectionId: "help" },
   { label: "Registration process", sectionId: "registration" },
   { label: "Costs", sectionId: "costs" },
-  { label: "Contact", sectionId: "contact" },
+  { label: "Contacts", sectionId: "contact" },
 ];
 
 const Header = () => {
