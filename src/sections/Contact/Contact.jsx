@@ -1,21 +1,157 @@
-import React from 'react';
+import React from "react";
 
 const Contact = () => {
   return (
-    <section id='contact'>
-      <h2>Contact</h2>
+    <section
+      id="contact"
+      style={{
+        padding: "2rem 4rem",
+        backgroundColor: "#f4f7ff",
+        display: "flex",
+        gap: "2rem",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "stretch", // ensures equal height columns
+      }}
+    >
+      {/* Left Column */}
+      <div
+        style={{
+          flex: "1 1 0", // grows/shrinks equally, base 0 width
+          minWidth: "280px",
+          maxWidth: "600px",
+          textAlign: "left",
+          color: "#1d2b54",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <div>
+          <h2>Contact</h2>
 
-      <h3>Address:</h3>
-      <p>
-        FDAU0021<br />
-        Compass Building,<br />
-        Al Shohada Road,<br />
-        Al Hamra Industrial Zone-FZ,<br />
-        Ras Al Khaimah, United Arab Emirates
-      </p>
+          <h3>Address:</h3>
+          <address
+            style={{ lineHeight: "1.5", marginBottom: "1.5rem", fontStyle: "normal" }}
+          >
+            FDAU0021
+            <br />
+            Compass Building,
+            <br />
+            Al Shohada Road,
+            <br />
+            Al Hamra Industrial Zone-FZ,
+            <br />
+            Ras Al Khaimah, United Arab Emirates
+          </address>
 
-      <h3>Contact:</h3>
-      <p>0585944811</p>
+          <h3>Contact:</h3>
+          <p style={{ fontSize: "1rem", marginBottom: "1.5rem" }}>0585944811</p>
+        </div>
+      </div>
+
+      {/* Right Column */}
+      <div
+        style={{
+          flex: "1 1 0",
+          minWidth: "320px",
+          maxWidth: "600px",
+          textAlign: "right",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+        }}
+      >
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            alert("Thank you for contacting us!");
+          }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
+            maxWidth: "100%",
+            marginLeft: "auto",
+            flexGrow: 1,
+          }}
+          noValidate
+        >
+          <p style={{ fontWeight: "600", fontSize: "1.1rem" }}>
+            Feel free to contact us; Submit the form and we will get back to you
+          </p>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            style={{
+              padding: "12px",
+              borderRadius: "8px",
+              border: "1px solid #ccc",
+              fontSize: "1rem",
+              outlineColor: "#1E73BE",
+            }}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            style={{
+              padding: "12px",
+              borderRadius: "8px",
+              border: "1px solid #ccc",
+              fontSize: "1rem",
+              outlineColor: "#1E73BE",
+            }}
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            style={{
+              padding: "12px",
+              borderRadius: "8px",
+              border: "1px solid #ccc",
+              fontSize: "1rem",
+              outlineColor: "#1E73BE",
+            }}
+          />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Message"
+            required
+            style={{
+              padding: "12px",
+              borderRadius: "8px",
+              border: "1px solid #ccc",
+              fontSize: "1rem",
+              resize: "vertical",
+              outlineColor: "#1E73BE",
+            }}
+          ></textarea>
+          <button
+            type="submit"
+            style={{
+              padding: "14px",
+              borderRadius: "8px",
+              border: "none",
+              backgroundColor: "#1E73BE",
+              color: "white",
+              fontSize: "1.1rem",
+              fontWeight: "700",
+              cursor: "pointer",
+              transition: "background-color 0.3s ease",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#014aad")}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#1E73BE")}
+          >
+            Send
+          </button>
+        </form>
+      </div>
     </section>
   );
 };

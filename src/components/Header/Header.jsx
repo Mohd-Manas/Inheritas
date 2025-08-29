@@ -1,9 +1,8 @@
 import React from 'react';
 import './Header.css';
-import Logo from '../../assets/Logo.png'
+import Logo from '../../assets/Logo.png';
 
 const UAEFlag = "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg";
-
 
 const menuItems = [
   { label: "Introduction", sectionId: "introduction" },
@@ -26,9 +25,9 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <img src={Logo} alt="Inheritas" className="header__logo" />
+        <img src={Logo} alt="Inheritas Logo" className="header__logo" />
 
-        <nav className="header__nav">
+        <nav className="header__nav" aria-label="Primary navigation">
           {menuItems.map(({ label, sectionId }) => (
             <button
               key={sectionId}
@@ -41,16 +40,22 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="header__contact">
-          <img src={UAEFlag} alt="UAE Flag" className="header__flag" />
-          <span>UAE</span>
-          <span className="header__phone">
-            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="#fff" viewBox="0 0 24 24">
+        <div className="header__contact" role="group" aria-label="Contact information and sign in">
+          <img src={UAEFlag} alt="United Arab Emirates flag" className="header__flag" />
+          <span className="header__country">UAE</span>
+          <span className="header__phone" aria-label="Phone number">
+            <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" fill="#ffffff" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 2.21.9 4.21 2.35 5.62l-3.15 3.15c-.2.2-.26.51-.13.77 1.02 1.92 3.02 3.12 5.38 3.12 3.87 0 7-3.13 7-7s-3.13-7-7-7zm0 12.5c-1.93 0-3.5-1.57-3.5-3.5S10.07 7.5 12 7.5s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
             </svg>
             +971 800 53425
           </span>
-          <button type="button" className="header__signin-button">Sign In</button>
+          <button
+            type="button"
+            className="header__signin-button"
+            aria-label="Sign in"
+          >
+            Sign In
+          </button>
         </div>
       </header>
 
