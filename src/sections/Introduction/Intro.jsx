@@ -5,7 +5,7 @@ const Intro = () => {
     
   return (
     <section
-      id="introduction"
+      id="home"
       style={{
         display: 'flex',
         flexWrap: 'wrap',

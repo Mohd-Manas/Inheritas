@@ -11,13 +11,13 @@ const Contact = () => {
         gap: "2rem",
         flexWrap: "wrap",
         justifyContent: "center",
-        alignItems: "stretch", // ensures equal height columns
+        alignItems: "stretch",
       }}
     >
       {/* Left Column */}
       <div
         style={{
-          flex: "1 1 0", // grows/shrinks equally, base 0 width
+          flex: "1 1 0",
           minWidth: "280px",
           maxWidth: "600px",
           textAlign: "left",
@@ -30,10 +30,32 @@ const Contact = () => {
         <div>
           <h2>Contact</h2>
 
+          <h3>Main Contact Details:</h3>
+          <p>
+            Email:{" "}
+            <a href="mailto:Sanjana.inheritas@gmail.com" style={{ color: "#1E73BE", textDecoration: "underline" }}>
+              Sanjana.inheritas@gmail.com
+            </a>
+          </p>
+          <p>
+            RAK Address: Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
+          </p>
+          <p>
+            Dubai Address: 18th Floor, Sheikh Rashid Tower, DWTC, Dubai, United Arab Emirates
+          </p>
+          <p>Working Hours: Mon – Fri : 09:00 AM – 06:00 PM</p>
+
+          <p>
+            Inheritas is a unit of Three Keys Consulting FZ LLC
+            <br />
+            Website:{" "}
+            <a href="https://www.tkcfzllc.com/" target="_blank" rel="noopener noreferrer" style={{ color: "#1E73BE", textDecoration: "underline" }}>
+              https://www.tkcfzllc.com/
+            </a>
+          </p>
+
           <h3>Address:</h3>
-          <address
-            style={{ lineHeight: "1.5", marginBottom: "1.5rem", fontStyle: "normal" }}
-          >
+          <address style={{ lineHeight: "1.5", marginBottom: "1.5rem", fontStyle: "normal" }}>
             FDAU0021
             <br />
             Compass Building,
