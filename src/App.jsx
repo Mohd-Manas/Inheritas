@@ -19,7 +19,6 @@ function HomePage() {
       <Needs />
       <Help />
       <Costs />
-      <Footer />
     </main>
   );
 }
