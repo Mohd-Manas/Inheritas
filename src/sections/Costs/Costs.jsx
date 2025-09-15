@@ -1,4 +1,5 @@
 import React from 'react';
+import './Costs.css'; // Import your CSS file
 
 const costsData = {
   scope: [
@@ -11,49 +12,36 @@ const costsData = {
     { label: 'Single Will', price: 'AED 3,500' },
     { label: 'Mirror Will (for spouses with reciprocal terms)', price: 'AED 6,500' },
   ],
-  residents: [
-    { label: 'Single Will', price: 'AED 3,500' },
-  ],
-  nonResidents: [
-    { label: 'Single Will', price: 'AED 5,000' },
-  ],
+  residents: [{ label: 'Single Will', price: 'AED 3,500' }],
+  nonResidents: [{ label: 'Single Will', price: 'AED 5,000' }],
 };
 
 const Card = ({ title, children }) => (
-  <div style={{
-    backgroundColor: '#f8fafc',
-    borderRadius: 12,
-    padding: '1.5rem',
-    boxShadow: '0 6px 12px rgba(0,0,0,0.05)',
-    flex: '1 1 300px',
-    margin: '1rem',
-  }}>
-    <h3 style={{ color: '#1E73BE', marginBottom: '1rem' }}>{title}</h3>
+  <div className="card">
+    <h3>{title}</h3>
     {children}
   </div>
 );
 
 const Costs = () => {
   return (
-    <section id="costs" style={{ padding: '2rem 4rem' }}>
-      <h2 style={{ color: '#1E73BE' }}>Costs</h2>
-      <p style={{ fontWeight: '600', marginBottom: '1rem' }}>Transparent & All-Inclusive Costs</p>
+    <section id="costs">
+      <h2>Costs</h2>
+      <p className="subtitle">Transparent & All-Inclusive Costs</p>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <div className="costs-container">
         <Card title="Scope of Services (included in every package):">
-          <ul style={{ paddingLeft: '1.5rem', color: '#33475b' }}>
+          <ul>
             {costsData.scope.map((item, idx) => (
-              <li key={idx} style={{ marginBottom: 8 }}>
-                {item}
-              </li>
+              <li key={idx}>{item}</li>
             ))}
           </ul>
         </Card>
 
         <Card title="Pricing:">
-          <ul style={{ paddingLeft: '1.5rem', color: '#33475b' }}>
+          <ul>
             {costsData.pricing.map((item, idx) => (
-              <li key={idx} style={{ marginBottom: 8 }}>
+              <li key={idx}>
                 <strong>{item.label}:</strong> {item.price}
               </li>
             ))}
@@ -61,11 +49,11 @@ const Costs = () => {
         </Card>
       </div>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <div className="costs-container">
         <Card title="For UAE Residents:">
-          <ul style={{ paddingLeft: '1.5rem', color: '#33475b' }}>
+          <ul>
             {costsData.residents.map((item, idx) => (
-              <li key={idx} style={{ marginBottom: 8 }}>
+              <li key={idx}>
                 <strong>{item.label}:</strong> {item.price}
               </li>
             ))}
@@ -73,9 +61,9 @@ const Costs = () => {
         </Card>
 
         <Card title="For Non-Residents:">
-          <ul style={{ paddingLeft: '1.5rem', color: '#33475b' }}>
+          <ul>
             {costsData.nonResidents.map((item, idx) => (
-              <li key={idx} style={{ marginBottom: 8 }}>
+              <li key={idx}>
                 <strong>{item.label}:</strong> {item.price}
               </li>
             ))}

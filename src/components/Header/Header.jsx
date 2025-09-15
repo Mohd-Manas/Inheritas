@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Logo from '../../assets/Logo.png';
 
 const Header = () => {
   const navigate = useNavigate();
-  const location = useLocation(); // get current pathname
+  const location = useLocation();
   const [activePath, setActivePath] = useState(location.pathname);
+
+  useEffect(() => {
+    setActivePath(location.pathname);
+  }, [location.pathname]);
 
   const menuItems = [
     { label: "Home", sectionId: "/" },
@@ -26,11 +30,11 @@ const Header = () => {
       <header
         style={{
           boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-          backgroundColor: "#ffffff",
+          backgroundColor: "#e0efff",  // Use light Background Blue Gradient start
           position: "sticky",
           top: 0,
           zIndex: 1000,
-          padding: "0.5rem 0",
+          padding: "0.5rem 1rem",
         }}
       >
         <div
@@ -41,7 +45,7 @@ const Header = () => {
             maxWidth: "1200px",
             margin: "0 auto",
             width: "100%",
-            padding: "0 2rem",
+            flexWrap: "wrap",
           }}
         >
           {/* Logo */}
@@ -54,6 +58,7 @@ const Header = () => {
                 width: "auto",
                 objectFit: "contain",
                 userSelect: "none",
+                filter: "drop-shadow(0 0 2px #2563EB)", // subtle Accent Blue drop shadow
               }}
             />
           </div>
@@ -65,11 +70,12 @@ const Header = () => {
               flex: "1 1 auto",
               display: "flex",
               justifyContent: "center",
-              gap: "2.5rem",
+              gap: "1.5rem",
               fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
               fontWeight: 600,
               fontSize: "1rem",
-              color: "#1E3A8A",
+              color: "#1E73BE",         // Primary Blue for nav text
+              flexWrap: "wrap",
             }}
           >
             {menuItems.map(({ label, sectionId }) => (
@@ -86,7 +92,7 @@ const Header = () => {
           </nav>
         </div>
       </header>
-      <div style={{ height: "1.5rem" }} />
+      <div style={{ height: "1.5rem", background: "linear-gradient(90deg, #e0efff 0%, #c1d8f7 100%)" }} /> {/* subtle gradient spacer */}
     </>
   );
 };

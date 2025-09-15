@@ -1,7 +1,7 @@
 .header__nav-button {
   background: none;
   border: none;
-  color: #1E3A8A;
+  color: #1E73BE; /* Primary Blue */
   padding: 0.25rem 0;
   transition: color 0.3s ease;
   font-weight: 600;
@@ -10,16 +10,16 @@
   position: relative;
 }
 
-/* Hover/focus styles */
+/* Hover and focus */
 .header__nav-button:hover,
 .header__nav-button:focus {
-  color: #2563EB;
+  color: #2563EB; /* Accent Blue */
   outline: none;
 }
 
-/* Active menu item styles */
+/* Active menu item */
 .header__nav-button.active {
-  color: #2563EB;
+  color: #2563EB; /* Accent Blue */
   font-weight: 700;
-  border-bottom: 2px solid #2563EB;
+  border-bottom: 2px solid #2563EB; /* Accent Blue */
 }

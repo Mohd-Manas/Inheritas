@@ -1,0 +1,60 @@
+#needs {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #e0efff 0%, #c1d8f7 100%); /* Background Blue Gradient */
+  color: #374151; /* Neutral Text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#needs h2 {
+  color: #1E73BE; /* Primary Blue */
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+#needs p.intro-text {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#needs .needs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+#needs .need-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
+  flex: 1 1 300px; /* Responsive cards */
+  max-width: 360px;
+  text-align: center;
+  cursor: pointer;
+  color: #374151; /* Neutral Text */
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              box-shadow 0.3s ease;
+  user-select: none;
+}
+
+#needs .need-card:hover {
+  background-color: #1E73BE; /* Primary Blue */
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(30, 115, 190, 0.6); /* Primary Blue shadow */
+}
+
+#needs .need-card strong {
+  font-size: 1.1rem;
+}
+
+#needs .need-card p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

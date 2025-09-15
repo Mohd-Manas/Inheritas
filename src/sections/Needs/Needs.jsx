@@ -1,4 +1,5 @@
 import React from 'react';
+import './Needs.css'; // Import the external CSS file
 
 const needsData = [
   {
@@ -25,49 +26,17 @@ const needsData = [
 
 const Needs = () => {
   return (
-    <section id="needs" style={{ padding: '1rem 7rem' }}>
+    <section id="needs">
       <h2>Needs</h2>
-      <p>
+      <p className="intro-text">
         Many people delay creating a Will, assuming it’s only necessary later in life. However, in the UAE’s legal context, having a Will is an urgent
         and essential step for anyone with assets, dependents, or business interests here.
       </p>
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '1rem',
-          marginTop: '1rem',
-          justifyContent: 'center', // Center last single card row
-        }}
-      >
+      <div className="needs-container">
         {needsData.map((need, index) => (
-          <div
-            key={index}
-            style={{
-              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-              padding: '1rem',
-              borderRadius: '8px',
-              backgroundColor: '#fff',
-              boxSizing: 'border-box',
-              flex: index === 4 ? '0 1 50%' : '0 1 45%', // 50% width for last card, 45% for others
-              maxWidth: index === 4 ? '50%' : '45%',
-              textAlign: 'center',
-              cursor: 'pointer',
-              transition: 'background-color 0.3s ease',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.backgroundColor = '#1E73BE';
-              e.currentTarget.style.color = '#fff';
-              e.currentTarget.style.boxShadow = '0 6px 15px rgba(1, 34, 105, 0.4)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.backgroundColor = '#fff';
-              e.currentTarget.style.color = '#000';
-              e.currentTarget.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
-            }}
-          >
+          <div key={index} className="need-card" tabIndex={0}>
             <strong>{need.title}</strong>
-            <p style={{ marginTop: '0.5rem' }}>{need.description}</p>
+            <p>{need.description}</p>
           </div>
         ))}
       </div>
