@@ -1,25 +1,72 @@
 .header__nav-button {
   background: none;
   border: none;
-  color: #1E73BE; /* Primary Blue */
-  padding: 0.25rem 0;
-  transition: color 0.3s ease;
+  color: #1E73BE;
+  /* Primary Blue */
+  padding: 0.25rem 0.5rem;
+  /* Added horizontal padding */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   position: relative;
+  white-space: nowrap;
+  /* Prevent wrapping */
 }
 
 /* Hover and focus */
 .header__nav-button:hover,
 .header__nav-button:focus {
-  color: #2563EB; /* Accent Blue */
+  color: #2563EB;
+  /* Accent Blue */
   outline: none;
+  border-bottom: 2px solid #2563EB;
+  /* Accent Blue underline on hover/focus */
 }
 
 /* Active menu item */
 .header__nav-button.active {
-  color: #2563EB; /* Accent Blue */
+  color: #2563EB;
+  /* Accent Blue */
   font-weight: 700;
-  border-bottom: 2px solid #2563EB; /* Accent Blue */
+  border-bottom: 2px solid #2563EB;
+  /* Accent Blue underline */
+}
+
+.logo-container {
+  flex: 0 0 auto;
+  cursor: pointer;
+  max-width: 160px;
+  /* max container width to keep logo reasonable */
+  overflow: hidden;
+}
+
+.logo-img {
+  height: auto;
+  max-width: 100%;
+  max-height: 60px;
+  /* same max height as your inline style */
+  width: auto;
+  object-fit: contain;
+  user-select: none;
+  filter: drop-shadow(0 0 2px #2563EB);
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header__nav-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+
+    .logo-container {
+      max-width: 140px;
+      /* slightly smaller max width on mobile */
+    }
+
+    .logo-img {
+      max-height: 48px;
+      /* smaller height on mobile */
+    }
+  }
 }
