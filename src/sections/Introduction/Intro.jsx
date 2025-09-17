@@ -1,5 +1,6 @@
 import React from "react";
-import IntroImg from "../../assets/intro-img.png"; // Adjust path as needed
+import IntroImg from "../../assets/intro-img.png";
+import './Intro.css';  // Import the CSS file for image container styling
 
 const Intro = () => {
   return (
@@ -10,31 +11,21 @@ const Intro = () => {
         minHeight: "300px",
         paddingLeft: "2rem",
         paddingRight: "2rem",
-        background: "linear-gradient(135deg, #e0efff 0%, #c1d8f7 100%)", // Background Blue Gradient
+        background: "linear-gradient(135deg, #e0efff 0%, #c1d8f7 100%)",
       }}
     >
-      <div
-        className="d-flex flex-wrap align-items-start"
-        style={{
-          flexDirection: "row",
-          gap: "2rem",
-          // keep original flex wrap with Bootstrap d-flex flex-wrap
-        }}
-      >
+      <div className="row align-items-start g-4">
         {/* Left Content */}
         <div
-          className="flex-grow-1"
+          className="col-12 col-lg-6"
           style={{
-            flex: "1 1 45%",
-            maxWidth: "45%",
-            minWidth: "300px", // optional min width for responsiveness
-            color: "#374151", // Neutral Text color
+            color: "#374151",
             fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
           }}
         >
           <h2
             style={{
-              color: "#1E73BE", // Primary Blue
+              color: "#1E73BE",
               fontWeight: 700,
               marginBottom: "1rem",
             }}
@@ -69,29 +60,11 @@ const Intro = () => {
         </div>
 
         {/* Right Image */}
-        <div
-          className="d-flex justify-content-center justify-content-md-start"
-          style={{
-            flex: "1 1 45%",
-            maxWidth: "45%",
-            minWidth: "300px",
-            marginLeft: "2rem",
-            alignItems: "center", // vertically center image if heights differ
-            boxSizing: "border-box",
-          }}
-        >
+        <div className="col-12 col-lg-6 intro-image-container">
           <img
             src={IntroImg}
             alt="Introduction Visual"
-            className="img-fluid rounded"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              border: "2px solid #1E73BE", // Primary Blue border
-              objectFit: "cover",
-              borderRadius: "0.5rem",
-              display: "block",
-            }}
+            className="intro-image"
           />
         </div>
       </div>

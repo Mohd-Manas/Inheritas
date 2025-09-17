@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Logo from '../../assets/Logo.png';
-import './Header.css'; // external CSS file
+import './Header.css';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ const Header = () => {
 
   useEffect(() => {
     setActivePath(location.pathname);
-    setIsMobileMenuOpen(false); // Close menu on route change
+    setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
   const menuItems = [
@@ -32,36 +32,37 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Close the drawer when clicking outside on mobile
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const closeOnOutside = (e) => {
+      if (!e.target.closest('.mobile-drawer')) setIsMobileMenuOpen(false);
+    };
+    document.addEventListener('mousedown', closeOnOutside);
+    return () => document.removeEventListener('mousedown', closeOnOutside);
+  }, [isMobileMenuOpen]);
+
   return (
     <header className="header">
       <div className="header-container">
         <div className="logo-container" onClick={() => handleClick('/')}>
-          <img
-            src={Logo}
-            alt="Inheritas Logo"
-            className="logo-img"
-          />
+          <img src={Logo} alt="Inheritas Logo" className="logo-img" />
         </div>
-
         <button
           className="mobile-menu-button"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
           aria-expanded={isMobileMenuOpen}
         >
-          <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`} />
+          <span className={`hamburger-icon`} />
         </button>
-
-        <nav
-          aria-label="Primary navigation"
-          className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}
-        >
+        <nav className="desktop-nav-menu" aria-label="Primary navigation">
           {menuItems.map(({ label, sectionId }) => (
             <button
               key={sectionId}
               onClick={() => handleClick(sectionId)}
               type="button"
-              className={`nav-button${activePath === sectionId ? " active" : ""}`}
+              className={`header__nav-button${activePath === sectionId ? " active" : ""}`}
               aria-label={`Navigate to ${label}`}
             >
               {label}
@@ -69,6 +70,24 @@ const Header = () => {
           ))}
         </nav>
       </div>
+      {/* Mobile Drawer */}
+      <div className={`mobile-drawer${isMobileMenuOpen ? ' open' : ''}`}>
+        <nav aria-label="Mobile navigation">
+          {menuItems.map(({ label, sectionId }) => (
+            <button
+              key={sectionId}
+              onClick={() => handleClick(sectionId)}
+              type="button"
+              className={`header__nav-button${activePath === sectionId ? " active" : ""}`}
+              aria-label={`Navigate to ${label}`}
+            >
+              {label}
+            </button>
+          ))}
+        </nav>
+      </div>
+      {/* Drawer background overlay */}
+      {isMobileMenuOpen && <div className="drawer-overlay" />}
     </header>
   );
 };

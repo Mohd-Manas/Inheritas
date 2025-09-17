@@ -1,72 +1,121 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #e0efff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .header__nav-button {
   background: none;
   border: none;
-  color: #1E73BE;
-  /* Primary Blue */
+  color: #1E73BE; /* Primary Blue */
   padding: 0.25rem 0.5rem;
-  /* Added horizontal padding */
-  transition: color 0.3s ease, border-bottom 0.3s ease;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
-  /* Prevent wrapping */
+  transition: border-bottom-color 0.3s ease;
+  border-bottom: 2px solid transparent; /* space reserved for underline */
 }
 
-/* Hover and focus */
+/* underline on hover and focus */
 .header__nav-button:hover,
 .header__nav-button:focus {
-  color: #2563EB;
-  /* Accent Blue */
   outline: none;
-  border-bottom: 2px solid #2563EB;
-  /* Accent Blue underline on hover/focus */
+  border-bottom-color: #2563EB; /* Accent Blue */
 }
 
-/* Active menu item */
+/* underline on active menu item */
 .header__nav-button.active {
-  color: #2563EB;
-  /* Accent Blue */
+  border-bottom-color: #2563EB; /* Accent Blue */
   font-weight: 700;
-  border-bottom: 2px solid #2563EB;
-  /* Accent Blue underline */
 }
 
-.logo-container {
-  flex: 0 0 auto;
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.desktop-nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.mobile-menu-button {
+  background: none;
+  border: none;
   cursor: pointer;
-  max-width: 160px;
-  /* max container width to keep logo reasonable */
-  overflow: hidden;
+  display: none;
+  width: 36px; height: 36px;
 }
 
-.logo-img {
-  height: auto;
-  max-width: 100%;
-  max-height: 60px;
-  /* same max height as your inline style */
-  width: auto;
-  object-fit: contain;
-  user-select: none;
-  filter: drop-shadow(0 0 2px #2563EB);
+.hamburger-icon {
   display: block;
+  width: 24px; height: 3px;
+  background: #1E73BE;
+  position: relative;
+}
+.hamburger-icon::before, .hamburger-icon::after {
+  content: '';
+  position: absolute;
+  left: 0; width: 24px; height: 3px;
+  background: #1E73BE;
+  transition: 0.3s;
+}
+.hamburger-icon::before { top: -8px; }
+.hamburger-icon::after { top: 8px; }
+
+.logo-container { flex: 0 0 auto; cursor: pointer; max-width: 160px; overflow: hidden; }
+.logo-img { height: auto; max-width: 100%; max-height: 60px; width: auto; object-fit: contain; user-select: none; display: block; }
+
+/* Drawer overlay */
+.drawer-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 900;
+  background: rgba(30, 115, 190, 0.05);
 }
 
-/* Responsive */
+/* Drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0; right: -280px;
+  width: 240px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 12px rgba(30,115,190,0.15);
+  z-index: 1001;
+  padding-top: 80px;
+  transition: right 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+.mobile-drawer nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
 @media (max-width: 768px) {
-  .header__nav-button {
-    font-size: 0.9rem;
-    padding: 0.5rem 0.75rem;
-
-    .logo-container {
-      max-width: 140px;
-      /* slightly smaller max width on mobile */
-    }
-
-    .logo-img {
-      max-height: 48px;
-      /* smaller height on mobile */
-    }
+  .desktop-nav-menu {
+    display: none;
   }
+  .mobile-menu-button {
+    display: block;
+  }
+  .logo-container { max-width: 140px; }
+  .logo-img { max-height: 48px; }
 }
