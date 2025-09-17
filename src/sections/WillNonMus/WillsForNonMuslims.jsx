@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import './WillsForNonMuslims.css';
 
 const faqs = [
   {
@@ -32,27 +33,29 @@ const faqs = [
 ];
 
 const WillsForNonMuslims = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFaq = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section
-      style={{
-        padding: "2rem 4rem",
-        maxWidth: "900px",
-        margin: "auto",
-        color: "#1d2b54",
-        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        lineHeight: 1.6,
-      }}
-    >
-      <h2 style={{ marginBottom: "1.5rem", fontWeight: "700" }}>
-        Frequently Asked Questions about non-Muslim Wills in the UAE
-      </h2>
+    <section className="wills-section">
+      <h2>Frequently Asked Questions about non-Muslim Wills in the UAE</h2>
 
       {faqs.map(({ question, answer }, idx) => (
-        <div key={idx} style={{ marginBottom: "1.5rem" }}>
-          <h3 style={{ fontWeight: "600", fontSize: "1.1rem", marginBottom: "0.5rem", color: "#1E73BE" }}>
+        <div key={idx} className="faq-item">
+          <h3 
+            className="faq-question" 
+            onClick={() => toggleFaq(idx)} 
+            tabIndex={0} 
+            onKeyDown={e => { if(e.key === 'Enter' || e.key === ' ') toggleFaq(idx); }}
+            role="button"
+            aria-expanded={openIndex === idx}
+          >
             {idx + 1}. {question}
           </h3>
-          <p style={{ marginLeft: "1rem", fontSize: "1rem", color: "#374151" }}>{answer}</p>
+          {openIndex === idx && <p className="faq-answer">{answer}</p>}
         </div>
       ))}
     </section>

@@ -1,0 +1,47 @@
+.wills-section {
+  padding: 2rem 4rem;
+  max-width: 900px;
+  margin: auto;
+  color: #1d2b54;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.wills-section h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #1E73BE;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-question {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #1E73BE;
+  cursor: pointer;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  color: #374151;
+  padding-left: 1rem;
+}
+
+.faq-answer ul,
+.faq-answer ol {
+  padding-left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .wills-section {
+    max-width: none !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100%;
+  }
+}
+
