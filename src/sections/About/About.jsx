@@ -1,8 +1,9 @@
 import React from "react";
+import './About.css';
 
 const About = () => {
   return (
-    <section style={{ padding: "2rem 4rem", maxWidth: "800px", margin: "auto", color: "#1d2b54" }}>
+    <section className="about-section">
       <h2>About Us</h2>
       <p>
         At Inheritas, we believe in the power of a well-planned future. Founded in August 2024 by a mother-daughter team, our company was born from the desire to simplify the complexities of financial planning and legal legacy. With a solid foundation in the banking and legal sectors, we bring a unique blend of financial expertise and legal insight to our clients in the UAE.
