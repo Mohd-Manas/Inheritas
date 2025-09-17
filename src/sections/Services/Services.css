@@ -1,0 +1,102 @@
+.services-section {
+  padding: 1rem 7rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.services-section h2 {
+  color: #1E73BE;
+  margin-bottom: 1rem;
+}
+
+.services-section p.title {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.services-section p.description {
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 75ch;
+}
+
+.steps-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.steps-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.steps-row.center {
+  justify-content: center;
+}
+
+.step-card {
+  flex: 0 0 45%;
+  background: linear-gradient(135deg, #a8c0ff, #1E73BE);
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 6px 10px rgba(63, 43, 150, 0.3);
+  color: white;
+  box-sizing: border-box;
+  min-width: 200px;
+}
+
+.step-card.single {
+  flex: 0 0 30%;
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ffffffdd, #3f2b961a);
+  color: #1E73BE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 6px #1E73BE;
+}
+
+/* Financial consultation specific styles */
+.financial-section h2 {
+  color: #1E73BE;
+  margin-bottom: 1rem;
+}
+
+.financial-section p.title {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.financial-section p.description {
+  color: #555;
+  margin-bottom: 1rem;
+  max-width: 75ch;
+}
+
+/* Responsive Full Width on Mobile */
+@media (max-width: 768px) {
+  .services-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .steps-row {
+    flex-direction: column;
+  }
+  .step-card {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+}
