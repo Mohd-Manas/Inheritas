@@ -86,17 +86,17 @@ const Register = () => {
         </p>
 
         <h3>Life Insurance: Protecting What Matters Most</h3>
-        <p className="description" style={{ maxWidth: "75ch" }}>
+        <p className="description" >
           Life is unpredictable, but your family's financial security doesn't have to be. We work with you to analyze your financial situation and identify the right life insurance policies to protect your loved ones from the unexpected. Our approach is to find solutions that provide the right level of coverage at a price that fits your budget. We help you navigate the complexities of different policy types—such as term, whole, and universal life insurance—to build a safety net that gives you and your family peace of mind.
         </p>
 
         <h3>Independent Investment Advisory: Strategic Growth for Your Future</h3>
-        <p className="description" style={{ maxWidth: "75ch" }}>
+        <p className="description" >
           As an independent advisor, I am not affiliated with any specific bank or investment company. This allows me to provide truly objective and unbiased advice. We conduct a thorough analysis of your financial goals, risk tolerance, and time horizon to construct a diversified investment portfolio tailored specifically for you. From retirement planning to long-term wealth accumulation, we provide ongoing advice and monitoring to help your investments grow strategically and confidently over time.
         </p>
 
         <h3>Estate Planning: Building a Lasting Legacy</h3>
-        <p className="description" style={{ maxWidth: "75ch" }}>
+        <p className="description" >
           A thoughtful estate plan is more than just a will; it is a roadmap for your legacy. We guide you through the process of organizing your assets and ensuring they are distributed according to your wishes. Our services include assistance with beneficiary designations, trusts, and other legal instruments that can simplify the process for your heirs and minimize tax burdens. We help you create a plan that provides clarity and confidence, ensuring your legacy is protected for future generations.
         </p>
       </section>
