@@ -18,7 +18,7 @@
 .services-section p.description {
   color: #555;
   margin-bottom: 2rem;
-  max-width: 75ch;
+  /* max-width: 75ch; */
 }
 
 .steps-group {
@@ -83,7 +83,7 @@
 .financial-section p.description {
   color: #555;
   margin-bottom: 1rem;
-  max-width: 75ch;
+  /* max-width: 75ch; */
 }
 
 /* Responsive Full Width on Mobile */
@@ -100,3 +100,12 @@
     min-width: auto;
   }
 }
+@media (min-width: 769px) {
+  .title {
+    text-align: center;
+  }
+  .financial-section{
+    text-align: center;
+  }
+}
+

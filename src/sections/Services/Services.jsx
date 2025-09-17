@@ -78,10 +78,10 @@ const Register = () => {
 
       <section className="financial-section" style={{ marginTop: "4rem" }}>
         <h2>Financial Consultation</h2>
-        <p className="title">
+        <h3 className="title">
           Your Path to Financial Peace of Mind
-        </p>
-        <p className="description" style={{ maxWidth: "75ch" }}>
+        </h3>
+        <p className="description" >
           At Inheritas, we believe that a well-structured financial future is built on three essential pillars: comprehensive protection, strategic planning, and unbiased investment advice. As an independent financial consultant, my role is to serve as your trusted guide, providing personalized solutions designed to help you achieve your unique life goals.
         </p>
 
