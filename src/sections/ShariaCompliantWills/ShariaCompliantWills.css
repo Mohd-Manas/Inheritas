@@ -1,0 +1,51 @@
+.sharia-section {
+  padding: 2rem 4rem;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sharia-section h2 {
+  margin-bottom: 1.5rem;
+  color: #1E73BE;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-question {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  max-height: 500px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 0.5rem;
+  color: #374151;
+  font-size: 1rem;
+  white-space: pre-line;
+}
+
+.faq-answer.collapsed {
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+/* Full width for mobile only */
+@media (max-width: 768px) {
+  .sharia-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

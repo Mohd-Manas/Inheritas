@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ShariaCompliantWills.css';
 
 const shariaFaqs = [
   {
@@ -40,19 +41,12 @@ const ShariaCompliantWills = () => {
   };
 
   return (
-    <section style={{ padding: "2rem 4rem", maxWidth: "900px", margin: "auto", fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
-      <h2 style={{ marginBottom: "1.5rem", color: "#1E73BE" }}>
-        Frequently Asked Questions about Sharia-Compliant Wills in the UAE
-      </h2>
+    <section className="sharia-section">
+      <h2>Frequently Asked Questions about Sharia-Compliant Wills in the UAE</h2>
       {shariaFaqs.map(({ question, answer }, idx) => (
         <div
           key={idx}
-          style={{
-            borderBottom: "1px solid #ddd",
-            padding: "1rem 0",
-            cursor: "pointer",
-            userSelect: "none",
-          }}
+          className="faq-item"
           onClick={() => toggleIndex(idx)}
           onKeyDown={(e) => (e.key === "Enter" || e.key === " " ? toggleIndex(idx) : null)}
           tabIndex={0}
@@ -61,24 +55,16 @@ const ShariaCompliantWills = () => {
           aria-controls={`faq-answer-${idx}`}
           id={`faq-question-${idx}`}
         >
-          <h3 style={{ margin: 0, fontWeight: "600", fontSize: "1.1rem" }}>
+          <h3 className="faq-question" id={`faq-question-${idx}`}>
             {idx + 1}. {question}
           </h3>
           <div
             id={`faq-answer-${idx}`}
             role="region"
             aria-labelledby={`faq-question-${idx}`}
-            style={{
-              maxHeight: openIndex === idx ? "500px" : "0",
-              overflow: "hidden",
-              transition: "max-height 0.3s ease",
-              marginTop: openIndex === idx ? "0.5rem" : "0",
-              color: "#374151",
-              fontSize: "1rem",
-              whiteSpace: "pre-line",
-            }}
+            className={`faq-answer${openIndex === idx ? "" : " collapsed"}`}
           >
-            <p style={{ margin: 0 }}>{answer}</p>
+            <p>{answer}</p>
           </div>
         </div>
       ))}
