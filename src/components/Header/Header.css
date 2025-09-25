@@ -33,7 +33,6 @@
   font-weight: 700;
 }
 
-
 .header-container {
   display: flex;
   align-items: center;
@@ -71,8 +70,21 @@
 .hamburger-icon::before { top: -8px; }
 .hamburger-icon::after { top: 8px; }
 
-.logo-container { flex: 0 0 auto; cursor: pointer; max-width: 160px; overflow: hidden; }
-.logo-img { height: auto; max-width: 100%; max-height: 60px; width: auto; object-fit: contain; user-select: none; display: block; }
+.logo-container { 
+  flex: 0 0 auto; 
+  cursor: pointer; 
+  max-width: 160px; 
+  overflow: hidden; 
+}
+.logo-img { 
+  height: auto; 
+  max-width: 100%; 
+  max-height: 60px; 
+  width: auto; 
+  object-fit: contain; 
+  user-select: none; 
+  display: block; 
+}
 
 /* Drawer overlay */
 .drawer-overlay {
@@ -88,7 +100,7 @@
   top: 0; right: -280px;
   width: 240px;
   height: 100vh;
-  background: #fff;
+  background: #ffffff; /* Changed to primary blue for better contrast */
   box-shadow: -2px 0 12px rgba(30,115,190,0.15);
   z-index: 1001;
   padding-top: 80px;
@@ -107,6 +119,23 @@
   flex-direction: column;
   gap: 1rem;
   padding: 0 2rem;
+}
+
+/* Override nav button color inside drawer to white for contrast */
+.mobile-drawer .header__nav-button {
+  color: #012269;
+}
+
+.mobile-drawer .header__nav-button:hover,
+.mobile-drawer .header__nav-button:focus {
+  border-bottom-color: #eeeeee;
+  color: #012269;
+}
+
+.mobile-drawer .header__nav-button.active {
+  border-bottom-color: #eeeeee;
+  font-weight: 700;
+  color: #012269;
 }
 
 @media (max-width: 768px) {
