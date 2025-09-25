@@ -38,7 +38,7 @@ const Costs = () => {
           </ul>
         </Card>
 
-        <Card title="Pricing:">
+        {/* <Card title="Pricing:">
           <ul>
             {costsData.pricing.map((item, idx) => (
               <li key={idx}>
@@ -46,7 +46,7 @@ const Costs = () => {
               </li>
             ))}
           </ul>
-        </Card>
+        </Card> */}
       </div>
 
       <div className="costs-container">

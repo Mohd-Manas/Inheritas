@@ -2,14 +2,14 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #e0efff;
+  background-color: #012269;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .header__nav-button {
   background: none;
   border: none;
-  color: #1E73BE; /* Primary Blue */
+  color: #ffffff; /* Primary Blue */
   padding: 0.25rem 0.5rem;
   font-weight: 600;
   font-size: 1rem;
@@ -24,12 +24,12 @@
 .header__nav-button:hover,
 .header__nav-button:focus {
   outline: none;
-  border-bottom-color: #2563EB; /* Accent Blue */
+  border-bottom-color: #ffffff; /* Accent Blue */
 }
 
 /* underline on active menu item */
 .header__nav-button.active {
-  border-bottom-color: #2563EB; /* Accent Blue */
+  border-bottom-color: #ffffff; /* Accent Blue */
   font-weight: 700;
 }
 
@@ -58,14 +58,14 @@
 .hamburger-icon {
   display: block;
   width: 24px; height: 3px;
-  background: #1E73BE;
+  background: #ffffff;
   position: relative;
 }
 .hamburger-icon::before, .hamburger-icon::after {
   content: '';
   position: absolute;
   left: 0; width: 24px; height: 3px;
-  background: #1E73BE;
+  background: #ffffff;
   transition: 0.3s;
 }
 .hamburger-icon::before { top: -8px; }

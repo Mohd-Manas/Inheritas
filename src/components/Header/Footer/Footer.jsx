@@ -9,8 +9,12 @@ const Footer = () => {
           <h4>Inheritas</h4>
           <p>
             A unit of Three Keys Consulting FZ LLC<br />
-            Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, UAE<br />
-            18th Floor, Sheikh Rashid Tower, DWTC, Dubai, UAE
+          </p>
+          <p>
+            RAK Address: Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
+          </p>
+          <p>
+            Dubai Address: 18th Floor, Sheikh Rashid Tower, DWTC, Dubai, United Arab Emirates
           </p>
         </div>
 

@@ -1,5 +1,5 @@
 import React from "react";
-
+import ContactImg from "../../assets/contact-us.png";
 const Contact = () => {
   return (
     <section
@@ -99,8 +99,18 @@ const Contact = () => {
           }}
           noValidate
         >
+          <img
+            src={ContactImg}
+            alt="Contact Us"
+            style={{
+              width: "100%",
+              maxHeight: "250px",
+              objectFit: "cover",
+              borderRadius: "8px"
+            }}
+          />
           <p style={{ fontWeight: "600", fontSize: "1.1rem" }}>
-            Feel free to contact us; Submit the form and we will get back to you
+            Get in touch with us for  support now
           </p>
           <input
             type="text"

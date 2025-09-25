@@ -60,13 +60,13 @@ const Intro = () => {
         </div>
 
         {/* Right Image */}
-        <div className="col-12 col-lg-6 intro-image-container">
+        {/* <div className="col-12 col-lg-6 intro-image-container">
           <img
             src={IntroImg}
             alt="Introduction Visual"
             className="intro-image"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
