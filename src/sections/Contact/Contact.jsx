@@ -33,7 +33,7 @@ const Contact = () => {
           <h3>Main Contact Details:</h3>
           <p>
             Email:{" "}
-            <a href="mailto:Sanjana.inheritas@gmail.com" style={{ color: "#1E73BE", textDecoration: "underline" }}>
+            <a href="mailto:Sanjana.inheritas@gmail.com" style={{ color: "#012269", textDecoration: "underline" }}>
               Sanjana.inheritas@gmail.com
             </a>
           </p>
@@ -49,7 +49,7 @@ const Contact = () => {
             Inheritas is a unit of Three Keys Consulting FZ LLC
             <br />
             Website:{" "}
-            <a href="https://www.tkcfzllc.com/" target="_blank" rel="noopener noreferrer" style={{ color: "#1E73BE", textDecoration: "underline" }}>
+            <a href="https://www.tkcfzllc.com/" target="_blank" rel="noopener noreferrer" style={{ color: "#012269", textDecoration: "underline" }}>
               https://www.tkcfzllc.com/
             </a>
           </p>
@@ -122,7 +122,7 @@ const Contact = () => {
               borderRadius: "8px",
               border: "1px solid #ccc",
               fontSize: "1rem",
-              outlineColor: "#1E73BE",
+              outlineColor: "#012269",
             }}
           />
           <input
@@ -135,7 +135,7 @@ const Contact = () => {
               borderRadius: "8px",
               border: "1px solid #ccc",
               fontSize: "1rem",
-              outlineColor: "#1E73BE",
+              outlineColor: "#012269",
             }}
           />
           <input
@@ -147,7 +147,7 @@ const Contact = () => {
               borderRadius: "8px",
               border: "1px solid #ccc",
               fontSize: "1rem",
-              outlineColor: "#1E73BE",
+              outlineColor: "#012269",
             }}
           />
           <textarea
@@ -161,7 +161,7 @@ const Contact = () => {
               border: "1px solid #ccc",
               fontSize: "1rem",
               resize: "vertical",
-              outlineColor: "#1E73BE",
+              outlineColor: "#012269",
             }}
           ></textarea>
           <button
@@ -170,7 +170,7 @@ const Contact = () => {
               padding: "14px",
               borderRadius: "8px",
               border: "none",
-              backgroundColor: "#1E73BE",
+              backgroundColor: "#012269",
               color: "white",
               fontSize: "1.1rem",
               fontWeight: "700",
@@ -178,7 +178,7 @@ const Contact = () => {
               transition: "background-color 0.3s ease",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#014aad")}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#1E73BE")}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#012269")}
           >
             Send
           </button>

@@ -7,7 +7,7 @@
 }
 
 .help-section h2 {
-  color: #1E73BE;
+  color: #012269;
   text-align: center;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -54,7 +54,7 @@
 }
 
 .accordion-card.active {
-  background-color: #1E73BE;
+  background-color: #012269;
   color: white;
   box-shadow: 0 4px 12px rgba(1, 34, 105, 0.3);
 }

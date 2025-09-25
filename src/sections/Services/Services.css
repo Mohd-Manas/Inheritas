@@ -5,7 +5,7 @@
 }
 
 .services-section h2 {
-  color: #1E73BE;
+  color: #012269;
   margin-bottom: 1rem;
 }
 
@@ -40,7 +40,7 @@
 
 .step-card {
   flex: 0 0 45%;
-  background: linear-gradient(135deg, #a8c0ff, #1E73BE);
+  background: linear-gradient(135deg, #a8c0ff, #012269);
   border-radius: 10px;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 6px 10px rgba(63, 43, 150, 0.3);
@@ -58,19 +58,19 @@
   height: 36px;
   border-radius: 50%;
   background: radial-gradient(circle at center, #ffffffdd, #3f2b961a);
-  color: #1E73BE;
+  color: #012269;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
-  box-shadow: 0 2px 6px #1E73BE;
+  box-shadow: 0 2px 6px #012269;
 }
 
 /* Financial consultation specific styles */
 .financial-section h2 {
-  color: #1E73BE;
+  color: #012269;
   margin-bottom: 1rem;
 }
 

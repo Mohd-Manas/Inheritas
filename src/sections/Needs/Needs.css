@@ -6,7 +6,7 @@
 }
 
 #needs h2 {
-  color: #1E73BE; /* Primary Blue */
+  color: #012269; /* Primary Blue */
   text-align: center;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -44,7 +44,7 @@
 }
 
 #needs .need-card:hover {
-  background-color: #1E73BE; /* Primary Blue */
+  background-color: #012269; /* Primary Blue */
   color: #fff;
   box-shadow: 0 6px 15px rgba(30, 115, 190, 0.6); /* Primary Blue shadow */
 }

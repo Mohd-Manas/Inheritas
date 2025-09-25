@@ -25,9 +25,10 @@ const Intro = () => {
         >
           <h2
             style={{
-              color: "#1E73BE",
+              color: "#012269",
               fontWeight: 700,
               marginBottom: "1rem",
+              margin: "0",
             }}
           >
             Introduction
