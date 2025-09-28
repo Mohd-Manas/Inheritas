@@ -8,6 +8,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
       box-shadow: 0 8px 20px rgba(30, 115, 190, 0.1);
+  background: white;
 }
 
 .wills-header-img {
