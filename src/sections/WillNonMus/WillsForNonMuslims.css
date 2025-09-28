@@ -57,6 +57,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100%;
+    color: #333333; /* lighter text color for mobile */
   }
 
   .wills-header-img {
@@ -66,9 +67,11 @@
 
   .faq-question {
     font-size: 1rem;
+    color: #012269; /* keep question dark or adjust to your preference */
   }
 
   .faq-answer {
     font-size: 0.95rem;
+    color: #555555; /* lighter answer text */
   }
 }
