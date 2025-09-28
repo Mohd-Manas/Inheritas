@@ -1,45 +1,81 @@
+/* ShariaCompliantWills.css */
+
 .sharia-section {
   padding: 2rem 4rem;
   max-width: 900px;
   margin: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(30, 115, 190, 0.1);
 }
+
+.sharia-header-img {
+  width: 100%;
+  max-width: 900px;
+  height: 380px; /* reduced height */
+  margin: 0 auto 2rem auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(30, 115, 190, 0.2);
+  object-fit: cover; /* cover fills container, cropping if needed */
+}
+
 
 .sharia-section h2 {
   margin-bottom: 1.5rem;
   color: #012269;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
 }
 
+/* FAQ container */
+.faqs-wrapper {
+  margin-top: 1rem;
+}
+
+/* Each FAQ item */
 .faq-item {
   border-bottom: 1px solid #ddd;
   padding: 1rem 0;
   cursor: pointer;
   user-select: none;
+  transition: background-color 0.3s ease;
 }
 
+.faq-item:hover {
+  background-color: #f5f7fb;
+}
+
+/* Question style */
 .faq-question {
   margin: 0;
   font-weight: 600;
   font-size: 1.1rem;
+  color: #034078;
 }
 
+/* Answer style */
 .faq-answer {
   max-height: 500px;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.4s ease, padding 0.4s ease;
   margin-top: 0.5rem;
   color: #374151;
   font-size: 1rem;
   white-space: pre-line;
+  padding: 0.5rem 0;
 }
 
 .faq-answer.collapsed {
   max-height: 0;
   margin-top: 0;
+  padding: 0;
   overflow: hidden;
 }
 
-/* Full width for mobile only */
+/* Responsive styling */
 @media (max-width: 768px) {
   .sharia-section {
     padding-left: 1rem;
@@ -47,5 +83,27 @@
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+ .sharia-header-img {
+  width: 100%;           
+  max-width: 400px;      
+  height: 240px;         
+  margin: 0 auto 2rem;  
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(30, 115, 190, 0.2);
+  object-fit: cover;    
+  object-position: center center; 
+}
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
   }
 }

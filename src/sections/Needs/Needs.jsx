@@ -1,5 +1,5 @@
 import React from 'react';
-import './Needs.css'; // Import the external CSS file
+import './Needs.css'; 
 
 const needsData = [
   {

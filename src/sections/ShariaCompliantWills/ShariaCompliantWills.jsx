@@ -1,19 +1,16 @@
+// ShariaCompliantWills.jsx
 import React, { useState } from "react";
 import './ShariaCompliantWills.css';
+import ShariaImg from "../../assets/Sharia-Compliant-Islamic.jpg"; // Update path accordingly
 
 const shariaFaqs = [
   {
     question: `What is a "Muslim Will" or 'Wasiya' in the UAE?`,
-    answer: `A Muslim will, often referred to as a 'Wasiya', is a legal document that allows a Muslim to make a bequest of up to one-third (1/3) of their estate. This portion can be left to non-family members, a charitable cause, or specific individuals who are not legal heirs. The remaining two-thirds (2/3) of the estate must be distributed according to the fixed shares outlined in Islamic Sharia law. It's a way to provide clarity on your wishes while respecting Islamic inheritance principles.`,
+    answer: `A Muslim will, often referred to as a 'Wasiya', is a legal document that allows a Muslim to make a bequest of up to one-third (1/3) of their estate. This portion can be left to non-family members, a charitable cause, or specific individuals who are not legal heirs. The remaining two-thirds (2/3) of the estate must be distributed according to the fixed shares outlined in Islamic Sharia law.`,
   },
   {
     question: `Why should a Muslim register a will in the UAE?`,
-    answer: `While Sharia law dictates inheritance for Muslims, a registered will can be very beneficial. It allows you to:
-    \n- Appoint a guardian for your minor children.
-    \n- Appoint an executor to administer your estate.
-    \n- Make specific bequests of up to one-third of your estate.
-    \n- Provide instructions for funeral arrangements.
-    \n- Streamline the probate process for your heirs, reducing potential delays and disputes.`,
+    answer: `While Sharia law dictates inheritance for Muslims, a registered will can be very beneficial. It allows you to:\n- Appoint a guardian for your minor children.\n- Appoint an executor to administer your estate.\n- Make specific bequests of up to one-third of your estate.\n- Provide instructions for funeral arrangements.\n- Streamline the probate process for your heirs, reducing potential delays and disputes.`,
   },
   {
     question: `What are the key differences between a Muslim and a non-Muslim will in the UAE?`,
@@ -41,33 +38,40 @@ const ShariaCompliantWills = () => {
   };
 
   return (
-    <section className="sharia-section">
+    <section className="sharia-section" aria-live="polite">
+      <img 
+        src={ShariaImg} 
+        alt="Sharia Compliant Wills Banner" 
+        className="sharia-header-img" 
+      />
       <h2>Frequently Asked Questions about Sharia-Compliant Wills in the UAE</h2>
-      {shariaFaqs.map(({ question, answer }, idx) => (
-        <div
-          key={idx}
-          className="faq-item"
-          onClick={() => toggleIndex(idx)}
-          onKeyDown={(e) => (e.key === "Enter" || e.key === " " ? toggleIndex(idx) : null)}
-          tabIndex={0}
-          aria-expanded={openIndex === idx}
-          role="button"
-          aria-controls={`faq-answer-${idx}`}
-          id={`faq-question-${idx}`}
-        >
-          <h3 className="faq-question" id={`faq-question-${idx}`}>
-            {idx + 1}. {question}
-          </h3>
+      <div className="faqs-wrapper">
+        {shariaFaqs.map(({ question, answer }, idx) => (
           <div
-            id={`faq-answer-${idx}`}
-            role="region"
-            aria-labelledby={`faq-question-${idx}`}
-            className={`faq-answer${openIndex === idx ? "" : " collapsed"}`}
+            key={idx}
+            className="faq-item"
+            onClick={() => toggleIndex(idx)}
+            onKeyDown={(e) => (e.key === "Enter" || e.key === " " ? toggleIndex(idx) : null)}
+            tabIndex={0}
+            aria-expanded={openIndex === idx}
+            role="button"
+            aria-controls={`faq-answer-${idx}`}
+            id={`faq-question-${idx}`}
           >
-            <p>{answer}</p>
+            <h3 className="faq-question" id={`faq-question-${idx}`}>
+              {idx + 1}. {question}
+            </h3>
+            <div
+              id={`faq-answer-${idx}`}
+              role="region"
+              aria-labelledby={`faq-question-${idx}`}
+              className={`faq-answer${openIndex === idx ? "" : " collapsed"}`}
+            >
+              <p>{answer}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };

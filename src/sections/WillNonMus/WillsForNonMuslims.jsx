@@ -1,5 +1,7 @@
+// WillsForNonMuslims.jsx
 import React, { useState } from "react";
 import './WillsForNonMuslims.css';
+import WillsImg from "../../assets/Wills for Non-Muslims.jpg"; // Replace with your image path
 
 const faqs = [
   {
@@ -41,6 +43,11 @@ const WillsForNonMuslims = () => {
 
   return (
     <section className="wills-section">
+      <img 
+        src={WillsImg}
+        alt="Wills Registration Process"
+        className="wills-header-img"
+      />
       <h2>Frequently Asked Questions about non-Muslim Wills in the UAE</h2>
 
       {faqs.map(({ question, answer }, idx) => (

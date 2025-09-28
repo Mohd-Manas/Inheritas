@@ -1,0 +1,142 @@
+/* Register.css */
+
+#registration {
+  padding: 1rem 7rem;
+  min-height: 100vh;
+  background: #fafdff;
+}
+
+.registration-title {
+  color: #012269;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.registration-desc {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.registration-intro {
+  color: #555;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.will-steps-wrapper {
+  margin-bottom: 2rem;
+}
+
+.will-step-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.will-step-card {
+  flex: 0 0 45%;
+  background: linear-gradient(135deg, #a8c0ff, #012269);
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 6px 10px rgba(63, 43, 150, 0.3);
+  color: white;
+  box-sizing: border-box;
+  min-width: 200px;
+  margin-bottom: 1rem;
+}
+
+.will-step-card--last {
+  flex: 0 0 30%;
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ffffffdd, #3f2b961a);
+  color: #012269;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 6px #012269;
+}
+
+.will-step-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.will-step-card p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: #e0e6ff;
+  margin-bottom: 0;
+}
+
+/* Financial Section */
+.financial-section {
+  margin-top: 4rem;
+}
+
+.financial-title {
+  color: #012269;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.financial-desc {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.financial-section p {
+  color: #555;
+  margin-bottom: 1rem;
+  max-width: 75ch;
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+  #registration {
+    padding: 1rem 2rem;
+  }
+  .will-step-card,
+  .will-step-card--last {
+    flex-basis: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .will-step-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #registration {
+    padding: 1rem 0.5rem;
+  }
+  .registration-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+  }
+  .will-step-card,
+  .will-step-card--last {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}
