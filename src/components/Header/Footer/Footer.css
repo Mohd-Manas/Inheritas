@@ -55,6 +55,10 @@ footer p.copyright {
   text-align: center;
 }
 
+.footer-h4{
+  color: #ffffff;
+}
+
 /* Flex children responsive widths */
 footer div.container > div {
   flex: 1 1 250px;

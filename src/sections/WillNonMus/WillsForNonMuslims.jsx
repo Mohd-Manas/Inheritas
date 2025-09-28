@@ -1,7 +1,7 @@
 // WillsForNonMuslims.jsx
 import React, { useState } from "react";
 import './WillsForNonMuslims.css';
-import WillsImg from "../../assets/Wills for Non-Muslims.jpg"; // Replace with your image path
+import WillsImg from "../../assets/Wills for Non-Muslims.jpeg"; // Replace with your image path
 
 const faqs = [
   {

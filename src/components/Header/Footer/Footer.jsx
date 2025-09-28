@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div>
-          <h4>Inheritas</h4>
+          <h4 className='footer-h4'>Inheritas</h4>
           <p>
             A unit of Three Keys Consulting FZ LLC<br />
           </p>
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4>Quick Links</h4>
+          <h4 className='footer-h4'>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4>Contact Us</h4>
+          <h4 className='footer-h4'>Contact Us</h4>
           <p>Email: <a href="mailto:Sanjana.inheritas@gmail.com">Sanjana.inheritas@gmail.com</a></p>
           <p>Phone: 0585944811</p>
           <p>Working Hours: Mon – Fri : 09:00 AM – 06:00 PM</p>

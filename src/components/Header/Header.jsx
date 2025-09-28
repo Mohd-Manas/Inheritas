@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Logo from '../../assets/Logo.png';
+import Logo from '../../assets/Logo.png'; // Your logo image path
 import './Header.css';
 
 const Header = () => {
@@ -36,7 +36,9 @@ const Header = () => {
   useEffect(() => {
     if (!isMobileMenuOpen) return;
     const closeOnOutside = (e) => {
-      if (!e.target.closest('.mobile-drawer')) setIsMobileMenuOpen(false);
+      if (!e.target.closest('.mobile-drawer') && !e.target.closest('.mobile-menu-button')) {
+        setIsMobileMenuOpen(false);
+      }
     };
     document.addEventListener('mousedown', closeOnOutside);
     return () => document.removeEventListener('mousedown', closeOnOutside);
@@ -54,7 +56,7 @@ const Header = () => {
           aria-label="Toggle menu"
           aria-expanded={isMobileMenuOpen}
         >
-          <span className={`hamburger-icon`} />
+          <span className={`hamburger-icon${isMobileMenuOpen ? " open" : ""}`} />
         </button>
         <nav className="desktop-nav-menu" aria-label="Primary navigation">
           {menuItems.map(({ label, sectionId }) => (

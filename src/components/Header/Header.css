@@ -51,24 +51,42 @@
   border: none;
   cursor: pointer;
   display: none;
-  width: 36px; height: 36px;
+  width: 36px; 
+  height: 36px;
 }
 
+/* Hamburger Icon bars */
 .hamburger-icon {
   display: block;
-  width: 24px; height: 3px;
+  width: 24px; 
+  height: 3px;
   background: #ffffff;
   position: relative;
+  transition: all 0.3s ease;
 }
 .hamburger-icon::before, .hamburger-icon::after {
   content: '';
   position: absolute;
   left: 0; width: 24px; height: 3px;
   background: #ffffff;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  border-radius: 1px;
 }
 .hamburger-icon::before { top: -8px; }
 .hamburger-icon::after { top: 8px; }
+
+/* Hamburger animation when open */
+.hamburger-icon.open {
+  background: transparent;
+}
+.hamburger-icon.open::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.hamburger-icon.open::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
 
 .logo-container { 
   flex: 0 0 auto; 
@@ -79,11 +97,14 @@
 .logo-img { 
   height: auto; 
   max-width: 100%; 
-  max-height: 60px; 
+  max-height: 80px; 
   width: auto; 
   object-fit: contain; 
   user-select: none; 
-  display: block; 
+  display: block;
+
+  /* Apply CSS filter to make logo white */
+  filter: brightness(0) invert(1);
 }
 
 /* Drawer overlay */
@@ -100,7 +121,7 @@
   top: 0; right: -280px;
   width: 240px;
   height: 100vh;
-  background: #ffffff; /* Changed to primary blue for better contrast */
+  background: #ffffff;
   box-shadow: -2px 0 12px rgba(30,115,190,0.15);
   z-index: 1001;
   padding-top: 80px;
@@ -121,7 +142,7 @@
   padding: 0 2rem;
 }
 
-/* Override nav button color inside drawer to white for contrast */
+/* Override nav button color inside drawer to primary blue */
 .mobile-drawer .header__nav-button {
   color: #012269;
 }
@@ -138,6 +159,7 @@
   color: #012269;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .desktop-nav-menu {
     display: none;
@@ -146,5 +168,5 @@
     display: block;
   }
   .logo-container { max-width: 140px; }
-  .logo-img { max-height: 48px; }
+  .logo-img { max-height: 78px; }
 }
