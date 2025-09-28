@@ -7,19 +7,19 @@
   color: #1d2b54;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-      box-shadow: 0 8px 20px rgba(30, 115, 190, 0.1);
-  background: white;
+  box-shadow: 0 8px 20px rgba(30, 115, 190, 0.1);
+  background-color: #fff;
 }
 
 .wills-header-img {
   width: 100%;
   max-width: 900px;
-  height: 380px; /* reduced height */
+  height: 380px;
   margin: 0 auto 2rem auto;
   display: block;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(30, 115, 190, 0.2);
-  object-fit: cover; /* cover fills container, cropping if needed */
+  object-fit: cover;
 }
 
 .wills-section h2 {
@@ -39,6 +39,18 @@
   margin-bottom: 0.5rem;
   color: #012269;
   cursor: pointer;
+  outline-offset: 2px;
+  outline-color: transparent;
+  outline-style: solid;
+  outline-width: 2px;
+  transition: outline-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-question:hover,
+.faq-question:focus {
+  color: #1e73be;
+  outline-color: #1e73be;
+  text-decoration: underline;
 }
 
 .faq-answer {
@@ -58,7 +70,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100%;
-    color: #333333; /* lighter text color for mobile */
+    color: #333333;
   }
 
   .wills-header-img {
@@ -68,11 +80,11 @@
 
   .faq-question {
     font-size: 1rem;
-    color: #012269; /* keep question dark or adjust to your preference */
+    color: #012269;
   }
 
   .faq-answer {
     font-size: 0.95rem;
-    color: #555555; /* lighter answer text */
+    color: #555555;
   }
 }

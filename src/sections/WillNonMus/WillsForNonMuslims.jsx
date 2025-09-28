@@ -42,27 +42,38 @@ const WillsForNonMuslims = () => {
   };
 
   return (
-    <section className="wills-section">
+    <section className="wills-section" aria-label="Frequently Asked Questions about non-Muslim Wills in the UAE">
       <img 
         src={WillsImg}
         alt="Wills Registration Process"
         className="wills-header-img"
       />
-      <h2>Frequently Asked Questions about non-Muslim Wills in the UAE</h2>
+      <h2 tabIndex={-1}>Frequently Asked Questions about non-Muslim Wills in the UAE</h2>
 
       {faqs.map(({ question, answer }, idx) => (
         <div key={idx} className="faq-item">
           <h3 
+            id={`faq-header-${idx}`}
             className="faq-question" 
             onClick={() => toggleFaq(idx)} 
             tabIndex={0} 
             onKeyDown={e => { if(e.key === 'Enter' || e.key === ' ') toggleFaq(idx); }}
             role="button"
             aria-expanded={openIndex === idx}
+            aria-controls={`faq-panel-${idx}`}
           >
             {idx + 1}. {question}
           </h3>
-          {openIndex === idx && <p className="faq-answer">{answer}</p>}
+          {openIndex === idx && (
+            <div
+              id={`faq-panel-${idx}`}
+              className="faq-answer"
+              role="region"
+              aria-labelledby={`faq-header-${idx}`}
+            >
+              <p>{answer}</p>
+            </div>
+          )}
         </div>
       ))}
     </section>
