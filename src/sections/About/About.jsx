@@ -19,7 +19,7 @@ const About = () => {
           </p>
         </div>
         <div className="about-img-wrapper">
-          <img 
+          <img
             className="about-img"
             src={AboutImg}
             alt="About Inheritas"
