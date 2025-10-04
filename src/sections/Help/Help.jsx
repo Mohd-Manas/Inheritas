@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
-import './Help.css'; // import the CSS file
+import './Help.css';
 
 const helpData = [
   {
@@ -62,11 +62,12 @@ const Help = () => {
                   aria-hidden="true"
                 />
               </div>
-              {isActive && (
-                <div className="accordion-content" id={`accordion-content-${index}`}>
-                  <p>{item.description}</p>
-                </div>
-              )}
+              <div
+                id={`accordion-content-${index}`}
+                className={`accordion-content${isActive ? ' show' : ''}`}
+              >
+                <p>{item.description}</p>
+              </div>
             </div>
           );
         })}
