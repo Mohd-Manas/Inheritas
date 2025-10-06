@@ -1,9 +1,25 @@
+:root {
+  color-scheme: light;
+}
+
 .help-section {
   padding: 4rem 2rem;
-  color: #374151;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 auto;
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* Force white background */
+  background-color: #ffffff !important;
+  background-image: none !important;
+  background-blend-mode: normal !important;
+
+  /* Text color */
+  color: #374151 !important;
+
+  /* Mobile dark mode fixes */
+  -webkit-text-fill-color: #374151 !important;
+  -webkit-box-shadow: none !important;
+  opacity: 1 !important;
 }
 
 .help-section h2 {
@@ -99,5 +115,13 @@
   .accordion-card {
     max-width: 100%;
     margin-bottom: 1rem;
+  }
+}
+
+/* Dark mode override */
+@media (prefers-color-scheme: dark) {
+  .help-section {
+    background-color: #ffffff !important;
+    color: #374151 !important;
   }
 }
