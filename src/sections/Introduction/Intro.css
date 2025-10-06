@@ -1,6 +1,6 @@
-/* Outer section */
+/* Intro section */
 .intro-section {
-  /* background: linear-gradient(135deg, #dbe9ff 0%, #c1d8f7 100%); */
+  background-color: #ffffff !important;  /* Force white background in all themes */
   border-radius: 10px;
   color: #1a2c5b;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -91,5 +91,13 @@
     max-height: 280px;
     max-width: 70%;
     margin: 0 auto;
+  }
+}
+
+/* Ensure white background even in dark mode */
+@media (prefers-color-scheme: dark) {
+  .intro-section {
+    background-color: #ffffff !important;
+    color: #1a2c5b;
   }
 }
