@@ -46,7 +46,6 @@ const Register = () => {
 
   return (
     <section id="registration" className="services-section">
-<<<<<<< HEAD
       <h2>Will Registration</h2>
       <p className="title">
         Our Registration Process
@@ -54,16 +53,6 @@ const Register = () => {
       <p className="description">
         We follow a clear, step-by-step method to ensure your Will is legally valid and recognized in the UAE:
       </p>
-=======
-      <h2>Register</h2>
-      <p className="title">Our Registration Process</p>
-
-      <div className="description-card">
-        <p className="description">
-          We follow a clear, step-by-step method to ensure your Will is legally valid and recognized in the UAE:
-        </p>
-      </div>
->>>>>>> 0345a0fcf54565f4fdeca87d1ca0693b3ae304fc
 
       <div className="steps-group">
         {groups.map((group, i) => (
