@@ -45,7 +45,7 @@ const Register = () => {
 
   return (
     <section id="registration">
-      <h2 className="registration-title">Register</h2>
+      <h2 className="registration-title">Will Registration</h2>
       <p className="registration-desc">Our Registration Process</p>
       <p className="registration-intro">
         We follow a clear, step-by-step method to ensure your Will is legally valid and recognized in the UAE:

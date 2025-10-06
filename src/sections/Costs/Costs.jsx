@@ -49,7 +49,7 @@ const Costs = () => {
         </Card> */}
       </div>
 
-      <div className="costs-container">
+      {/* <div className="costs-container">
         <Card title="For UAE Residents:">
           <ul>
             {costsData.residents.map((item, idx) => (
@@ -69,7 +69,7 @@ const Costs = () => {
             ))}
           </ul>
         </Card>
-      </div>
+      </div> */}
     </section>
   );
 };

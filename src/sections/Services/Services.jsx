@@ -46,7 +46,7 @@ const Register = () => {
 
   return (
     <section id="registration" className="services-section">
-      <h2>Register</h2>
+      <h2>Will Registration</h2>
       <p className="title">
         Our Registration Process
       </p>
