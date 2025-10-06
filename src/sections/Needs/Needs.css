@@ -80,3 +80,10 @@
   font-size: 0.95rem;
   line-height: 1.4;
 }
+
+@media (prefers-color-scheme: dark) {
+  .intro-section {
+    background-color: #ffffff !important;
+    color: #1a2c5b;
+  }
+}
