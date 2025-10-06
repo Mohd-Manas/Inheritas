@@ -1,15 +1,10 @@
-/* Intro section */
+/* Outer section */
 .intro-section {
-  background-color: #ffffff !important;  /* Force white background */
-  color: #1a2c5b;
+  /* background: linear-gradient(135deg, #dbe9ff 0%, #c1d8f7 100%); */
   border-radius: 10px;
+  color: #1a2c5b;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 3rem 2rem;
-
-  /* Prevent dark mode inversion on mobile browsers */
-  color-scheme: light;
-  -webkit-text-fill-color: #1a2c5b; /* Fix iOS Safari dark mode text color */
-  -webkit-box-shadow: none !important; /* Fix any dark shadows forced */
 }
 
 /* Flex wrapper for content + image */
@@ -79,14 +74,14 @@
     align-items: center;
   }
   .intro-content {
-    text-align: center;
+    text-align: center; /* center on mobile if you want */
     flex: 1 1 100%;
   }
   .intro-content h2 {
     font-size: 1.8rem;
   }
   .intro-content ul {
-    padding-left: 10;
+    padding-left: 0;
   }
   .intro-image-wrapper {
     flex: 1 1 100%;
@@ -96,13 +91,5 @@
     max-height: 280px;
     max-width: 70%;
     margin: 0 auto;
-  }
-}
-
-/* Ensure white background even in dark color scheme */
-@media (prefers-color-scheme: dark) {
-  .intro-section {
-    background-color: #ffffff !important;
-    color: #1a2c5b;
   }
 }

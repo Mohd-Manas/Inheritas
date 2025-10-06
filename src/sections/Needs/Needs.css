@@ -1,35 +1,17 @@
-/* Apply color-scheme on root for best cross-browser support */
-:root {
-  color-scheme: light;
-}
-
-/* Needs container */
 #needs {
-  padding: 4rem 2rem;
-
-  /* Force white background with high specificity */
-  background-color: #ffffff !important;
-  background-image: none !important;
-  background-blend-mode: normal !important;
-
-  color: #374151;
+  padding: 1rem 2rem;
+  /* background: linear-gradient(135deg, #e0efff 0%, #c1d8f7 100%);  */
+  color: #374151; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  /* Fix mobile forced dark mode quirks */
-  -webkit-text-fill-color: #374151 !important;
-  -webkit-box-shadow: none !important;
-  opacity: 1 !important;
 }
 
-/* Headings */
 #needs h2 {
-  color: #012269;
+  color: #012269; /* Primary Blue */
   text-align: center;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
-/* Intro text paragraph */
 #needs p.intro-text {
   max-width: 800px;
   margin: 0 auto 2rem auto;
@@ -37,7 +19,6 @@
   font-size: 1rem;
 }
 
-/* Container for need cards */
 #needs .needs-container {
   display: flex;
   flex-wrap: wrap;
@@ -45,45 +26,29 @@
   justify-content: center;
 }
 
-/* Cards */
 #needs .need-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem 1.5rem;
   border-radius: 8px;
   background-color: #fff;
   box-sizing: border-box;
-  flex: 1 1 300px;
+  flex: 1 1 300px; /* Responsive cards */
   max-width: 360px;
   text-align: center;
   cursor: pointer;
-  color: #374151;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  color: #374151; /* Neutral Text */
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              box-shadow 0.3s ease;
   user-select: none;
 }
 
-/* Icon */
-#needs .need-card .need-icon {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 0.75rem auto;
-  display: block;
-  object-fit: contain;
-  filter: none;
-  transition: filter 0.3s ease;
-}
-
-/* Hover effect */
 #needs .need-card:hover {
-  background-color: #012269;
+  background-color: #012269; /* Primary Blue */
   color: #fff;
-  box-shadow: 0 6px 15px rgba(30, 115, 190, 0.6);
+  box-shadow: 0 6px 15px rgba(30, 115, 190, 0.6); /* Primary Blue shadow */
 }
 
-#needs .need-card:hover .need-icon {
-  filter: brightness(0) invert(1);
-}
-
-/* Other texts */
 #needs .need-card strong {
   font-size: 1.1rem;
 }
@@ -92,22 +57,4 @@
   margin-top: 0.5rem;
   font-size: 0.95rem;
   line-height: 1.4;
-}
-
-/* Responsive */
-@media (max-width: 991.98px) {
-  #needs {
-    padding: 2rem 1rem;
-  }
-  #needs .needs-container {
-    justify-content: center;
-  }
-}
-
-/* Dark mode override */
-@media (prefers-color-scheme: dark) {
-  #needs {
-    background-color: #ffffff !important;
-    color: #374151 !important;
-  }
 }
