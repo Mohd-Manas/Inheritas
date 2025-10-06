@@ -1,10 +1,15 @@
 /* Intro section */
 .intro-section {
-  background-color: #ffffff !important;  /* Force white background in all themes */
-  border-radius: 10px;
+  background-color: #ffffff !important;  /* Force white background */
   color: #1a2c5b;
+  border-radius: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 3rem 2rem;
+
+  /* Prevent dark mode inversion on mobile browsers */
+  color-scheme: light;
+  -webkit-text-fill-color: #1a2c5b; /* Fix iOS Safari dark mode text color */
+  -webkit-box-shadow: none !important; /* Fix any dark shadows forced */
 }
 
 /* Flex wrapper for content + image */
@@ -74,7 +79,7 @@
     align-items: center;
   }
   .intro-content {
-    text-align: center; /* center on mobile if you want */
+    text-align: center;
     flex: 1 1 100%;
   }
   .intro-content h2 {
@@ -94,7 +99,7 @@
   }
 }
 
-/* Ensure white background even in dark mode */
+/* Ensure white background even in dark color scheme */
 @media (prefers-color-scheme: dark) {
   .intro-section {
     background-color: #ffffff !important;
