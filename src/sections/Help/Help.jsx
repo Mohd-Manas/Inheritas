@@ -32,6 +32,8 @@ const Help = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  
+
   return (
     <section id="help" className="help-section">
       <h2>Help</h2>

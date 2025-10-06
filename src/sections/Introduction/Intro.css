@@ -81,7 +81,7 @@
     font-size: 1.8rem;
   }
   .intro-content ul {
-    padding-left: 0;
+    padding-left: 10;
   }
   .intro-image-wrapper {
     flex: 1 1 100%;

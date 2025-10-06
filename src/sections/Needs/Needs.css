@@ -1,7 +1,7 @@
 #needs {
-  padding: 1rem 2rem;
-  /* background: linear-gradient(135deg, #e0efff 0%, #c1d8f7 100%);  */
-  color: #374151; 
+  padding: 4rem 2rem;
+  /* background: linear-gradient(135deg, #e0efff 0%, #c1d8f7 100%); */
+  color: #374151;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -37,16 +37,38 @@
   text-align: center;
   cursor: pointer;
   color: #374151; /* Neutral Text */
-  transition: background-color 0.3s ease,
-              color 0.3s ease,
-              box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   user-select: none;
+}
+
+#needs .need-card .need-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 0.75rem auto; /* centers the icon horizontally */
+  display: block; /* makes the image a block element so margin auto works */
+  object-fit: contain;
+  filter: none;
+  transition: filter 0.3s ease;
 }
 
 #needs .need-card:hover {
   background-color: #012269; /* Primary Blue */
   color: #fff;
   box-shadow: 0 6px 15px rgba(30, 115, 190, 0.6); /* Primary Blue shadow */
+}
+
+#needs .need-card .need-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.75rem;
+  object-fit: contain;
+  filter: none;
+  transition: filter 0.3s ease;
+}
+
+/* Optional: Invert icon color on hover to better contrast with dark bg */
+#needs .need-card:hover .need-icon {
+  filter: brightness(0) invert(1);
 }
 
 #needs .need-card strong {
