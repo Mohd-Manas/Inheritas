@@ -26,8 +26,8 @@ const Card = ({ title, children }) => (
 const Costs = () => {
   return (
     <section id="costs">
-      <h2>Costs</h2>
-      <p className="subtitle">Transparent & All-Inclusive Costs</p>
+      {/* <h2>Costs</h2>
+      <p className="subtitle">Transparent & All-Inclusive Costs</p> */}
 
       <div className="costs-container">
         <Card title="Scope of Services (included in every package):">
