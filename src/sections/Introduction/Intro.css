@@ -1,6 +1,6 @@
 /* Outer section */
 .intro-section {
-  /* background: linear-gradient(135deg, #dbe9ff 0%, #c1d8f7 100%); */
+  background: linear-gradient(135deg, #dbe9ff 0%, #c1d8f7 100%);
   border-radius: 10px;
   color: #1a2c5b;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

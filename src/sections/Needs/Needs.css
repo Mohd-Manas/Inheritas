@@ -1,6 +1,6 @@
 #needs {
   padding: 1rem 2rem;
-  /* background: linear-gradient(135deg, #e0efff 0%, #c1d8f7 100%);  */
+  background: linear-gradient(135deg, #e0efff 0%, #c1d8f7 100%); 
   color: #374151; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -57,4 +57,16 @@
   margin-top: 0.5rem;
   font-size: 0.95rem;
   line-height: 1.4;
+}
+
+#needs .need-icon {
+  display: block;
+  margin: 0 auto 0.5rem auto; 
+  width: 50px; 
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+#needs .need-card:hover .need-icon {
+  filter: brightness(0) invert(1); 
 }
