@@ -39,7 +39,7 @@ const Help = () => {
       <h2>Help</h2>
       <p className="subtitle">How INHERITAS Can Help</p>
       <p className="description">
-        At INHERITAS, we understand that preparing a Will is a deeply personal matter — but also a critical legal safeguard. Our role is to make the
+        At INHERITAS, we understand that preparing a Will is a deeply personal matter - but also a critical legal safeguard. Our role is to make the
         process simple, transparent, and fully compliant with UAE laws.
       </p>
 
