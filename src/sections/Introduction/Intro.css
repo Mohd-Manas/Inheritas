@@ -1,6 +1,6 @@
 /* Outer section */
 .intro-section {
-  background: linear-gradient(135deg, #dbe9ff 0%, #c1d8f7 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%);
   border-radius: 10px;
   color: #1a2c5b;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -81,7 +81,7 @@
     font-size: 1.8rem;
   }
   .intro-content ul {
-    padding-left: 0;
+    padding-left: 10;
   }
   .intro-image-wrapper {
     flex: 1 1 100%;
