@@ -72,6 +72,7 @@ const Header = () => {
           ))}
         </nav>
       </div>
+
       {/* Mobile Drawer */}
       <div className={`mobile-drawer${isMobileMenuOpen ? ' open' : ''}`}>
         <nav aria-label="Mobile navigation">
@@ -86,8 +87,19 @@ const Header = () => {
               {label}
             </button>
           ))}
+          {/* New mobile-only external link */}
+          <a
+            href="https://threekeysconsulting.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="header__nav-button external-link"
+            style={{ marginTop: '1rem', display: 'block', textAlign: 'center' }}
+          >
+            Three Keys Consulting
+          </a>
         </nav>
       </div>
+
       {/* Drawer background overlay */}
       {isMobileMenuOpen && <div className="drawer-overlay" />}
     </header>

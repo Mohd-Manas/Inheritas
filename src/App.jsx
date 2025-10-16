@@ -1,5 +1,7 @@
+// File: src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Footer from './components/Header/Footer/Footer';
 
 import Intro from './sections/Introduction/Intro';
 import Needs from './sections/Needs/Needs';
@@ -10,7 +12,8 @@ import About from './sections/About/About';
 import WillsForNonMuslims from './sections/WillNonMus/WillsForNonMuslims';
 import ShariaCompliantWills from './sections/ShariaCompliantWills/ShariaCompliantWills';
 import Services from "./sections/Services/Services";
-import Footer from './components/Header/Footer/Footer';
+
+import ScrollRestoration from './components/Header/ScrollRestoration'; // Custom component
 
 function HomePage() {
   return (
@@ -27,6 +30,7 @@ function App() {
   return (
     <Router>
       <Header />
+      <ScrollRestoration /> {/* Scrolls to top on route change */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/wills-non-muslims" element={<WillsForNonMuslims />} />

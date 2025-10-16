@@ -9,7 +9,7 @@
 .header__nav-button {
   background: none;
   border: none;
-  color: #ffffff; /* Primary Blue */
+  color: #ffffff; /* Primary Blue for desktop nav */
   padding: 0.25rem 0.5rem;
   font-weight: 600;
   font-size: 1rem;
@@ -118,10 +118,11 @@
 /* Drawer */
 .mobile-drawer {
   position: fixed;
-  top: 0; right: -280px;
+  top: 0; 
+  right: -280px;
   width: 240px;
   height: 100vh;
-  background: #ffffff;
+  background: #012269; /* Primary blue */
   box-shadow: -2px 0 12px rgba(30,115,190,0.15);
   z-index: 1001;
   padding-top: 80px;
@@ -142,21 +143,33 @@
   padding: 0 2rem;
 }
 
-/* Override nav button color inside drawer to primary blue */
-.mobile-drawer .header__nav-button {
-  color: #012269;
+/* Nav buttons and external link inside drawer */
+.mobile-drawer .header__nav-button,
+.mobile-drawer .external-link {
+  color: #ffffff; /* White text */
+  background: none;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  padding: 0.25rem 0;
+  transition: border-bottom-color 0.3s ease;
+  display: block;
 }
 
+/* Hover and focus for mobile drawer buttons */
 .mobile-drawer .header__nav-button:hover,
-.mobile-drawer .header__nav-button:focus {
-  border-bottom-color: #eeeeee;
-  color: #012269;
+.mobile-drawer .header__nav-button:focus,
+.mobile-drawer .external-link:hover,
+.mobile-drawer .external-link:focus {
+  border-bottom-color: #ffffff;
+  outline: none;
 }
 
+/* Active state */
 .mobile-drawer .header__nav-button.active {
-  border-bottom-color: #eeeeee;
+  border-bottom-color: #ffffff;
   font-weight: 700;
-  color: #012269;
 }
 
 /* Responsive adjustments */

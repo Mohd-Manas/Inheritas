@@ -1,3 +1,4 @@
+// File: src/components/Header/Footer/Footer.jsx
 import React from 'react';
 import './Footer.css'; 
 
@@ -8,10 +9,7 @@ const Footer = () => {
         <div>
           <h4 className='footer-h4'>Inheritas</h4>
           <p>
-            A unit of Three Keys Consulting FZ LLC<br />
-          </p>
-          <p>
-            RAK Address: Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
+            A unit of Three Keys Consulting FZ LLC
           </p>
           <p>
             Dubai Address: 18th Floor, Sheikh Rashid Tower, DWTC, Dubai, United Arab Emirates

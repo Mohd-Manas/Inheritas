@@ -1,9 +1,7 @@
-/* Footer.css reworked for mobile responsiveness */
-
 footer {
   background-color: #012269; /* Primary Blue */
   color: white;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-top: auto;
 }
@@ -14,12 +12,12 @@ footer > div.container {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 2rem;
+  gap: 1rem;
   box-sizing: border-box;
 }
 
 footer h4 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
@@ -27,13 +25,13 @@ footer p,
 footer a {
   color: white;
   text-decoration: none;
-  line-height: 1.5;
-  margin-bottom: 0.5rem; /* Reduced bottom margin for less spacing */
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
 }
 
 footer a:hover,
 footer a:focus {
-  color: #2563EB; /* Accent Blue */
+  color: #2563EB;
   text-decoration: underline;
 }
 
@@ -44,47 +42,77 @@ footer ul {
 }
 
 footer ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 footer hr {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   border-color: rgba(255, 255, 255, 0.3);
   border-style: solid none none none;
   border-width: 1px 0 0 0;
 }
 
 footer p.copyright {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-align: center;
   margin: 0;
-  padding-bottom: 0.5rem; /* Reduced padding */
+  padding-bottom: 0.25rem;
 }
 
 .footer-h4 {
   color: #ffffff;
 }
 
-/* Flex children responsive widths */
+/* Flex children widths */
 footer div.container > div {
   flex: 1 1 250px;
   min-width: 200px;
 }
 
-/* Responsive for small devices */
+/* Mobile Responsive Layout */
 @media (max-width: 768px) {
   footer > div.container {
     flex-direction: column;
-    align-items: stretch; 
-    gap: 0.1rem; /* Reduce gap space */
+    align-items: stretch;
+    gap: 0.25rem;
   }
 
+  /* Stack content in compact rows */
   footer div.container > div {
     max-width: 100%;
-    padding: 0 0.5rem; /* Add small horizontal padding */
+    padding: 0.25rem 0; 
   }
 
+  /* Reduce padding for the footer itself */
   footer {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  /* Adjust headings for mobile */
+  footer h4 {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+
+  /* Reduce spacing between paragraphs and links */
+  footer p,
+  footer a {
+    margin-bottom: 0.15rem;
+    font-size: 0.9rem;
+  }
+
+  footer ul li {
+    margin-bottom: 0.15rem;
+  }
+
+  /* Reduce HR spacing */
+  footer hr {
+    margin: 1rem 0;
+  }
+
+  /* Copyright smaller */
+  footer p.copyright {
+    font-size: 0.8rem;
+    padding-bottom: 0.2rem;
   }
 }
