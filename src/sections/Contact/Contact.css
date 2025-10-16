@@ -7,27 +7,27 @@
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start; /* Updated from stretch for better spacing */
   box-sizing: border-box;
   color: #1d2b54;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Left Column */
-#contact > div:first-child {
+.contact-left {
   flex: 1 1 0;
   min-width: 280px;
   max-width: 600px;
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1rem; /* Added for consistent spacing between elements */
 }
 
 /* Headings and paragraph colors */
 #contact h2,
 #contact h3 {
-  margin-bottom: 1rem;
+  margin: 0.5rem 0; /* Reduced margins to remove extra space */
 }
 
 #contact a {
@@ -35,21 +35,15 @@
   text-decoration: underline;
 }
 
-#contact address {
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  font-style: normal;
-}
-
 /* Right Column */
-#contact > div:last-child {
+.contact-right {
   flex: 1 1 0;
   min-width: 320px;
   max-width: 600px;
   text-align: right;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  gap: 1rem; /* Added spacing consistency */
 }
 
 /* Form styles */
@@ -59,7 +53,6 @@
   gap: 1rem;
   max-width: 100%;
   margin-left: auto;
-  flex-grow: 1;
 }
 
 #contact img {
@@ -72,6 +65,7 @@
 #contact p.support-text {
   font-weight: 600;
   font-size: 1.1rem;
+  margin: 0; /* Remove extra spacing */
 }
 
 /* Inputs and textarea */
@@ -115,13 +109,10 @@
     flex-direction: column;
     align-items: center;
   }
-  #contact > div:first-child,
-  #contact > div:last-child {
+  .contact-left,
+  .contact-right {
     flex: 1 1 100%;
     max-width: 100%;
-    text-align: center;
-  }
-  #contact > div:last-child {
     text-align: center;
   }
   #contact img {

@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section id="contact">
       {/* Left Column */}
-      <div>
+      <div className="contact-left">
         <h2>Contact</h2>
 
         <h3>Main Contact Details:</h3>
@@ -16,46 +16,29 @@ const Contact = () => {
             Sanjana.inheritas@gmail.com
           </a>
         </p>
-        <p>
-          RAK Address: Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ,
-          Ras Al Khaimah, United Arab Emirates
-        </p>
-        <br />
-        <p>
-          Dubai Address: 18th Floor, Sheikh Rashid Tower, DWTC, Dubai, United Arab Emirates
-        </p>
-         <br/>
-        <p>Working Hours: Mon – Fri : 09:00 AM – 06:00 PM</p>
+        
+        <p>Working Hours: Mon – Fri: 09:00 AM – 06:00 PM</p>
 
         <p>
           Inheritas is a unit of Three Keys Consulting FZ LLC
           <br />
-           <br/>
           Website:{" "}
           <a href="https://www.tkcfzllc.com/" target="_blank" rel="noopener noreferrer">
             https://www.tkcfzllc.com
           </a>
         </p>
-        <br/>
+
         <h3>Address:</h3>
-        <address>
-          FDAU0021
-          <br />
-          Compass Building,
-          <br />
-          Al Shohada Road,
-          <br />
-          Al Hamra Industrial Zone-FZ,
-          <br />
-          Ras Al Khaimah, United Arab Emirates
-        </address>
+        <p>
+          Dubai Address: 18th Floor, Sheikh Rashid Tower, DWTC, Dubai, United Arab Emirates
+        </p>
 
         <h3>Contact:</h3>
         <p>0585944811</p>
       </div>
 
       {/* Right Column */}
-      <div>
+      <div className="contact-right">
         <form
           onSubmit={(e) => {
             e.preventDefault();
