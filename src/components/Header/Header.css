@@ -102,9 +102,7 @@
   object-fit: contain; 
   user-select: none; 
   display: block;
-
-  /* Apply CSS filter to make logo white */
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1); /* white logo */
 }
 
 /* Drawer overlay */
@@ -155,6 +153,7 @@
   padding: 0.25rem 0;
   transition: border-bottom-color 0.3s ease;
   display: block;
+  border-radius: 4px;
 }
 
 /* Hover and focus for mobile drawer buttons */
@@ -164,6 +163,9 @@
 .mobile-drawer .external-link:focus {
   border-bottom-color: #ffffff;
   outline: none;
+  background-color: rgba(255, 255, 255, 0.1); /* subtle highlight */
+  padding-left: 0.5rem; /* slight indentation */
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
 }
 
 /* Active state */
