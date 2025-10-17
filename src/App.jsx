@@ -14,7 +14,6 @@ const WillsForNonMuslims = lazy(() => import('./sections/WillNonMus/WillsForNonM
 const ShariaCompliantWills = lazy(() => import('./sections/ShariaCompliantWills/ShariaCompliantWills'));
 const Services = lazy(() => import('./sections/Services/Services'));
 
-// Smooth ScrollToTop on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
 
