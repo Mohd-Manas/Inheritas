@@ -17,7 +17,7 @@ const contactSchema = z.object({
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm({
     resolver: zodResolver(contactSchema)
   });
@@ -149,9 +149,8 @@ const Contact = () => {
                 <motion.img
                   src={ContactImg}
                   alt="Contact Us"
-                  className="w-32 h-32 mx-auto mb-4 object-contain"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
+                  className=" mx-auto mb-4 object-cover"
+                  style={{ width: '500px', height: '250px' }}
                 />
                 <p className="text-neutral-600 font-medium">
                   Get in touch with us for support now

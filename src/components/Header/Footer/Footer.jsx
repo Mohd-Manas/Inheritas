@@ -12,7 +12,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary-900 text-white">
+    <footer className="bg-primary-900 text-white" style={{background:"#012269"}}>
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <motion.div
