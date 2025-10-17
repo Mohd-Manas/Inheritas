@@ -16,13 +16,10 @@ const Header = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
 
   const menuItems = [
     { label: "Home", sectionId: "/" },
@@ -38,9 +35,7 @@ const Header = () => {
     navigate(path);
   };
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
@@ -55,7 +50,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="sticky top-0 z-50"
+      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-md' : ''}`}
       style={{ backgroundColor: '#012269' }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -63,6 +58,8 @@ const Header = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
+
+          {/* Logo */}
           <motion.div
             className="flex-shrink-0 cursor-pointer"
             onClick={() => handleClick('/')}
@@ -76,7 +73,7 @@ const Header = () => {
             />
           </motion.div>
 
-
+          {/* Hamburger */}
           <button
             className="mobile-menu-button lg:hidden p-2 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded-md"
             onClick={toggleMobileMenu}
@@ -84,24 +81,19 @@ const Header = () => {
             aria-expanded={isMobileMenuOpen}
           >
             <div className="w-6 h-5 relative flex flex-col justify-between">
-              <motion.span
-                className="w-full h-0.5 bg-white rounded-full"
+              <motion.span className="w-full h-0.5 bg-white rounded-full"
                 animate={isMobileMenuOpen ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.span
-                className="w-full h-0.5 bg-white rounded-full"
+                transition={{ duration: 0.3 }} />
+              <motion.span className="w-full h-0.5 bg-white rounded-full"
                 animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.span
-                className="w-full h-0.5 bg-white rounded-full"
+                transition={{ duration: 0.3 }} />
+              <motion.span className="w-full h-0.5 bg-white rounded-full"
                 animate={isMobileMenuOpen ? { rotate: -45, y: -9 } : { rotate: 0, y: 0 }}
-                transition={{ duration: 0.3 }}
-              />
+                transition={{ duration: 0.3 }} />
             </div>
           </button>
 
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1" aria-label="Primary navigation">
             {menuItems.map(({ label, sectionId }) => (
               <motion.button
@@ -114,7 +106,6 @@ const Header = () => {
                   }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                aria-label={`Navigate to ${label}`}
               >
                 {label}
                 {activePath === sectionId && (
@@ -130,6 +121,7 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
@@ -140,7 +132,6 @@ const Header = () => {
               exit={{ opacity: 0 }}
               onClick={() => setIsMobileMenuOpen(false)}
             />
-
             <motion.div
               className="mobile-drawer fixed top-0 right-0 w-72 h-full bg-primary-900 shadow-2xl z-50 overflow-y-auto"
               initial={{ x: '100%' }}
@@ -161,7 +152,6 @@ const Header = () => {
                         }`}
                       whileHover={{ x: 5 }}
                       whileTap={{ scale: 0.95 }}
-                      aria-label={`Navigate to ${label}`}
                     >
                       {label}
                     </motion.button>

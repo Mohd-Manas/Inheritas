@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,9 +13,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary-900 text-white" style={{background:"#012269"}}>
+    <footer className="bg-primary-900 text-white" style={{ background: "#012269" }}>
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          
+          {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,6 +36,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
+          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -43,18 +47,19 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
-                  <a
-                    href={link.path}
+                  <Link
+                    to={link.path}
                     className="text-primary-100 hover:text-white transition-colors duration-200 inline-flex items-center group"
                   >
                     <span className="mr-2 transform group-hover:translate-x-1 transition-transform duration-200">→</span>
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </motion.div>
 
+          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -65,10 +70,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-primary-100">
                 <FaEnvelope className="flex-shrink-0 text-primary-300" />
-                <a
-                  href="mailto:Sanjana.inheritas@gmail.com"
-                  className="hover:text-white transition-colors duration-200"
-                >
+                <a href="mailto:Sanjana.inheritas@gmail.com" className="hover:text-white transition-colors duration-200">
                   Sanjana.inheritas@gmail.com
                 </a>
               </li>
