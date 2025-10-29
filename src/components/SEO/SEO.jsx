@@ -43,7 +43,7 @@ export default function SEO({
             "addressCountry": "AE"
           },
           "telephone": "0585944811",
-          "email": "Sanjana.inheritas@gmail.com",
+          "email": "shakti@tkcfzllc.com",
           "priceRange": "AED 3,500 - AED 6,500"
         })}
       </script>

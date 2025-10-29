@@ -70,8 +70,8 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-primary-100">
                 <FaEnvelope className="flex-shrink-0 text-primary-300" />
-                <a href="mailto:Sanjana.inheritas@gmail.com" className="hover:text-white transition-colors duration-200">
-                  Sanjana.inheritas@gmail.com
+                <a href="mailto:shakti@tkcfzllc.com" className="hover:text-white transition-colors duration-200">
+                  shakti@tkcfzllc.com
                 </a>
               </li>
               <li className="flex items-center gap-3 text-primary-100">
